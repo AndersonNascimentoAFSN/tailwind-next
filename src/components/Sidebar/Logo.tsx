@@ -2,7 +2,7 @@ import { SVGProps } from 'react'
 
 export function Logo(props: SVGProps<SVGSVGElement>) {
   return (
-    <strong className="flex items-center gap-2 text-xl font-semibold text-zinc-900">
+    <strong className="text-xl font-semibold text-zinc-900 mx-1 flex items-center gap-2">
       <svg
         width={38}
         height={38}
