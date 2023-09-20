@@ -2,12 +2,13 @@ import {
   MagnifyingGlassIcon,
   LifebuoyIcon,
   Cog6ToothIcon,
-} from '@heroicons/react/24/solid'
+} from '@heroicons/react/24/outline'
 
 import { Logo } from './Logo'
 import { MainNavigation } from './main-navigation'
 import { MainNavigationItem } from './main-navigation/main-navigation-item'
 import { UsedSpaceWidget } from './used-space-widget'
+import { Profile } from './profile'
 
 export function Sidebar() {
   return (
@@ -33,6 +34,10 @@ export function Sidebar() {
           </nav>
 
           <UsedSpaceWidget />
+
+          <div className="h-px bg-zinc-200" />
+
+          <Profile />
         </div>
       </aside>
     </>
