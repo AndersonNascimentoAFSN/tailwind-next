@@ -9,6 +9,7 @@ import { MainNavigation } from './main-navigation'
 import { MainNavigationItem } from './main-navigation/main-navigation-item'
 import { UsedSpaceWidget } from './used-space-widget'
 import { Profile } from './profile'
+import { Input } from '../Input'
 
 export function Sidebar() {
   return (
@@ -16,14 +17,12 @@ export function Sidebar() {
       <aside className="border-r border-zinc-200 px-2 py-8 flex flex-col gap-6">
         <Logo />
 
-        <div className="rounded-lg border border-zinc-300 px-3 py-2 mx-1 shadow-sm flex items-center gap-2">
-          <MagnifyingGlassIcon className="h-5 w-5 text-zinc-500" />
-
-          <input
-            className="text-zinc-900 placeholder-zinc-600 border-0 bg-transparent p-0 flex-1 w-full"
-            placeholder="Search"
-          />
-        </div>
+        <Input.Root>
+          <Input.Prefix>
+            <MagnifyingGlassIcon className="h-5 w-5 text-zinc-500" />
+          </Input.Prefix>
+          <Input.Control placeholder="Search" />
+        </Input.Root>
 
         <MainNavigation />
 
