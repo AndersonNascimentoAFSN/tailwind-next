@@ -5,9 +5,9 @@ import {
 } from '@heroicons/react/24/outline'
 
 import { Logo } from './Logo'
-import { MainNavigation } from './main-navigation'
-import { MainNavigationItem } from './main-navigation/main-navigation-item'
-import { UsedSpaceWidget } from './used-space-widget'
+import { MainNavigation } from './MainNavigation'
+import { MainNavigationItem } from './MainNavigation/MainNavigationItem'
+import { UsedSpaceWidget } from './UsedSpaceWidget'
 import { Profile } from './profile'
 import { Input } from '../Input'
 
@@ -28,8 +28,16 @@ export function Sidebar() {
 
         <div className="mt-auto flex flex-col gap-6">
           <nav className="space-y-0.5">
-            <MainNavigationItem title="Support" icon={LifebuoyIcon} />
-            <MainNavigationItem title="Support" icon={Cog6ToothIcon} />
+            <MainNavigationItem
+              title="Support"
+              icon={LifebuoyIcon}
+              navItemProps={{ href: '#' }}
+            />
+            <MainNavigationItem
+              title="Settings"
+              icon={Cog6ToothIcon}
+              navItemProps={{ href: '/settings' }}
+            />
           </nav>
 
           <UsedSpaceWidget />
