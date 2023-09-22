@@ -1,6 +1,13 @@
 'use client'
 
-import { ComponentProps, FC, createContext, useContext, useId } from 'react'
+import {
+  ComponentProps,
+  FC,
+  createContext,
+  useContext,
+  useId,
+  useState,
+} from 'react'
 import { tv } from 'tailwind-variants'
 
 const root = tv({
@@ -9,17 +16,22 @@ const root = tv({
 
 type IFileInputContext = {
   id: string
+  files: File[]
+  onFilesSelected: (files: File[]) => void
 }
 
 type IRootProps = ComponentProps<'div'>
 
-const FileInputContext = createContext<Partial<IFileInputContext>>({})
+const FileInputContext = createContext<IFileInputContext>(
+  {} as IFileInputContext,
+)
 
 export const Root: FC<IRootProps> = ({ className, ...props }) => {
   const id = useId()
+  const [files, setFiles] = useState<File[]>([])
 
   return (
-    <FileInputContext.Provider value={{ id }}>
+    <FileInputContext.Provider value={{ id, files, onFilesSelected: setFiles }}>
       <div className={root({ className })} {...props} />
     </FileInputContext.Provider>
   )

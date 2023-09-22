@@ -1,4 +1,4 @@
-import { Mail, UploadCloud, User } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 import { Button } from '../Button'
 import { Input } from '../Input'
