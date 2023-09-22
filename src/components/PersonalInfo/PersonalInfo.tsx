@@ -127,8 +127,9 @@ export function PersonalInfo() {
               Share a few snippets of your work.
             </p>
           </label>
-          <FileInput.Root>
+          <FileInput.Root className="items-stretch flex-col gap-4">
             <FileInput.Trigger htmlFor="portfolio" />
+            <FileInput.FileList />
             <FileInput.Control multiple id="portfolio" />
           </FileInput.Root>
         </div>
