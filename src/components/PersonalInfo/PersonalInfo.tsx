@@ -1,8 +1,9 @@
 import { Mail } from 'lucide-react'
 
-import { Button } from '../Button'
-import { Input } from '../Input'
-import { FileInput } from '../Form/FileInput'
+import { Button } from '@/components//Button'
+import { Input } from '@/components/Input'
+import { FileInput } from '@/components/Form/FileInput'
+import { Select } from '@/components/Form/Select'
 
 export function PersonalInfo() {
   return (
@@ -104,7 +105,8 @@ export function PersonalInfo() {
           <label htmlFor="email" className="text-sm font-medium text-zinc-700">
             Country
           </label>
-          <div></div>
+
+          <Select />
         </div>
 
         <div className="grid gap-3 grid-cols-form pt-5">
