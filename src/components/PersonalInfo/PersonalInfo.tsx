@@ -4,6 +4,7 @@ import { Button } from '@/components//Button'
 import { Input } from '@/components/Input'
 import { FileInput } from '@/components/Form/FileInput'
 import { Select } from '@/components/Form/Select'
+import { SelectItem } from '../Form/Select/SelectItem'
 
 export function PersonalInfo() {
   return (
@@ -92,21 +93,39 @@ export function PersonalInfo() {
         </div>
 
         <div className="grid gap-3 grid-cols-form pt-5">
+          <label htmlFor="email" className="text-sm font-medium text-zinc-700">
+            Country
+          </label>
+
+          <Select placeholder="Select a country...">
+            <SelectItem value="br">Brazil</SelectItem>
+            <SelectItem value="us">United States</SelectItem>
+          </Select>
+        </div>
+
+        <div className="grid gap-3 grid-cols-form pt-5">
           <label
             htmlFor="timezone"
             className="text-sm font-medium text-zinc-700"
           >
             Timezone
           </label>
-          <div></div>
-        </div>
 
-        <div className="grid gap-3 grid-cols-form pt-5">
-          <label htmlFor="email" className="text-sm font-medium text-zinc-700">
-            Country
-          </label>
+          <Select placeholder="Select a timezone...">
+            <SelectItem value="pst">
+              <span className="text-zinc-900">
+                Pacific Standard Time (PST){' '}
+                <span className="text-zinc-500">UTC−08:00</span>
+              </span>
+            </SelectItem>
 
-          <Select />
+            <SelectItem value="akdt">
+              <span className="text-zinc-900">
+                Alaska Daylight Time (AKDT){' '}
+                <span className="text-zinc-500">UTC−08:00</span>
+              </span>
+            </SelectItem>
+          </Select>
         </div>
 
         <div className="grid gap-3 grid-cols-form pt-5">

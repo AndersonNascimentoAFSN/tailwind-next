@@ -22,7 +22,7 @@ type InputRootProps = ComponentProps<'input'>
 function InputRoot(props: InputRootProps) {
   return (
     <div
-      className="rounded-lg border border-zinc-300 px-3 py-2 mx-1 shadow-sm flex items-center gap-2"
+      className="rounded-lg border border-zinc-300 px-3 py-2 shadow-sm flex items-center gap-2"
       {...props}
     />
   )
