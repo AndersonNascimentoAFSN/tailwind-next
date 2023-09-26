@@ -1,15 +1,18 @@
 'use client'
 
 import { FC } from 'react'
-import { useFileInput } from './Root'
 import { Trash2, UploadCloud } from 'lucide-react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+
+import { useFileInput } from './Root'
 import { FormatBytes } from '@/utils/format-bytes'
 
 export const FileList: FC = () => {
   const { files } = useFileInput()
+  const [parent, _enableAnimations] = useAutoAnimate()
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3" ref={parent}>
       {files.map((file) => (
         <div
           key={file.name}
