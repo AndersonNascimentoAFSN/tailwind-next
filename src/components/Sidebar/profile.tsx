@@ -1,5 +1,6 @@
 import { ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import { Button } from '../Button'
 export function Profile() {
   return (
     <div className="flex items-center gap-3">
@@ -22,9 +23,9 @@ export function Profile() {
         </p>
       </div>
 
-      <button type="button" className="ml-auto p-2 hover:bg-zinc-50 rounded-md">
+      <Button type="button" variant="ghost">
         <ArrowRightOnRectangleIcon className="w-5 h-5 text-zinc-500" />
-      </button>
+      </Button>
     </div>
   )
 }

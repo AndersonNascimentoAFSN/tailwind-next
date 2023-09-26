@@ -19,7 +19,7 @@ export function PersonalInfo() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Button type="button" variant="secondary">
+          <Button type="button" variant="outline">
             Cancel
           </Button>
           <Button type="submit" form="settings" variant="primary">
@@ -143,39 +143,19 @@ export function PersonalInfo() {
                 <SelectItem value="md">Markdown</SelectItem>
               </Select>
               <div className="flex items-center gap-1">
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="border-none bg-transparent"
-                >
+                <Button type="button" variant="ghost">
                   <Bold className="h-4 w-4 text-zinc-500" strokeWidth={3} />
                 </Button>
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="border-none bg-transparent"
-                >
+                <Button type="button" variant="ghost">
                   <Italic className="h-4 w-4 text-zinc-500" strokeWidth={3} />
                 </Button>
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="border-none bg-transparent"
-                >
+                <Button type="button" variant="ghost">
                   <Link className="h-4 w-4 text-zinc-500" strokeWidth={3} />
                 </Button>
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="border-none bg-transparent"
-                >
+                <Button type="button" variant="ghost">
                   <List className="h-4 w-4 text-zinc-500" strokeWidth={3} />
                 </Button>
-                <Button
-                  type="button"
-                  variant="secondary"
-                  className="border-none bg-transparent"
-                >
+                <Button type="button" variant="ghost">
                   <ListOrdered
                     className="h-4 w-4 text-zinc-500"
                     strokeWidth={3}
@@ -209,7 +189,7 @@ export function PersonalInfo() {
         </div>
 
         <div className="pt-5 flex gap-3 justify-end items-center">
-          <Button type="button" variant="secondary">
+          <Button type="button" variant="outline">
             Cancel
           </Button>
           <Button type="submit" variant="primary">

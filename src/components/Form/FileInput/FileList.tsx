@@ -6,6 +6,7 @@ import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 import { useFileInput } from './Root'
 import { FormatBytes } from '@/utils/format-bytes'
+import { Button } from '@/components/Button'
 
 export const FileList: FC = () => {
   const { files } = useFileInput()
@@ -40,12 +41,9 @@ export const FileList: FC = () => {
             </div>
           </div>
 
-          <button
-            type="button"
-            className="ml-auto rounded-md p-2 hover:bg-zinc-50"
-          >
+          <Button type="button" variant="ghost">
             <Trash2 className="h-5 w-5 text-zinc-500 group-hover:text-zinc-700" />
-          </button>
+          </Button>
         </div>
       ))}
     </div>
