@@ -9,7 +9,7 @@ import { FormatBytes } from '@/utils/format-bytes'
 
 export const FileList: FC = () => {
   const { files } = useFileInput()
-  const [parent, _enableAnimations] = useAutoAnimate()
+  const [parent] = useAutoAnimate()
 
   return (
     <div className="space-y-3" ref={parent}>

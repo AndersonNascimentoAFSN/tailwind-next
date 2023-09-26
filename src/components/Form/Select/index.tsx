@@ -1,6 +1,6 @@
 'use client'
 
-import { ComponentProps, FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import { ChevronDown } from 'lucide-react'
 
 import * as SelectPrimitive from '@radix-ui/react-select'
