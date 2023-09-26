@@ -9,7 +9,7 @@ import { MainNavigation } from './MainNavigation'
 import { MainNavigationItem } from './MainNavigation/MainNavigationItem'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
 import { Profile } from './profile'
-import { Input } from '../Input'
+import { Input } from '../Form/Input'
 
 export function Sidebar() {
   return (

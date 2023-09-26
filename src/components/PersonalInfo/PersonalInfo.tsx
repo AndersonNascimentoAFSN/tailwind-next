@@ -1,7 +1,7 @@
 import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 
 import { Button } from '@/components//Button'
-import { Input } from '@/components/Input'
+import { Input } from '@/components/Form/Input'
 import { FileInput } from '@/components/Form/FileInput'
 import { Select } from '@/components/Form/Select'
 import { SelectItem } from '../Form/Select/SelectItem'

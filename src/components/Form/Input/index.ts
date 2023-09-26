@@ -1,9 +1,9 @@
+import { Control } from './Control'
+import { Prefix } from './Prefix'
 import { Root } from './Root'
-import { Field } from './Field'
-import { Icon } from './Icon'
 
 export const Input = {
   Root,
-  Field,
-  Icon,
+  Control,
+  Prefix,
 }

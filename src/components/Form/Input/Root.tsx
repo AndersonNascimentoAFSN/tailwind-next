@@ -1,18 +1,14 @@
-import { HTMLAttributes, ReactNode } from 'react'
+import { ComponentProps } from 'react'
+import { tv } from 'tailwind-variants'
 
-interface RootProps extends HTMLAttributes<HTMLDivElement> {
-  children: ReactNode
+const root = tv({
+  base: 'rounded-lg border border-zinc-300 px-3 py-2 shadow-sm flex items-center gap-2 focus-within:border-violet-300 focus-within:ring-4 focus-within:ring-violet-100',
+  variants: {},
+  defaultVariants: {},
+})
+
+type RootProps = ComponentProps<'input'>
+
+export function Root({ className, ...rest }: RootProps) {
+  return <div className={root({ className })} {...rest} />
 }
-
-const BASE_INPUT_ROOT_CLASSES =
-  'flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm'
-
-export function Root({ children, ...rest }: RootProps) {
-  return (
-    <div className={`${BASE_INPUT_ROOT_CLASSES} ${rest?.className}`}>
-      {children}
-    </div>
-  )
-}
-
-Root.displayName = 'Input.Root'
