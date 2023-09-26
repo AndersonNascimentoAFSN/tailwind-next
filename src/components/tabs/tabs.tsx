@@ -20,9 +20,11 @@ export function Tabs({ tabs }: TabsProps) {
           <T.Trigger
             key={tabItem.value}
             value={tabItem.value}
-            className="px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700 relative"
+            className="px-1 pb-4 text-sm font-medium text-zinc-500 hover:text-violet-700 data-[state=active]:text-violet-700 relative group"
           >
-            <span>{tabItem.title}</span>
+            <span className="group-focus-visible:ring-2 group-focus-visible:ring-violet-100 rounded group-focus-visible:ring-offset-4">
+              {tabItem.title}
+            </span>
 
             {currentTab === tabItem.value && (
               <motion.div
