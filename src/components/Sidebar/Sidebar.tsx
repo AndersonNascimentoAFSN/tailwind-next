@@ -14,7 +14,7 @@ import { Input } from '../Form/Input'
 export function Sidebar() {
   return (
     <>
-      <aside className="border-r border-zinc-200 px-2 py-8 flex flex-col gap-6">
+      <aside className="border-b py-4 border-zinc-200 px-2 flex flex-col gap-6 fixed left-0 top-0 right-0 bottom-0 z-20 bg-white lg:right-auto lg:w-80 lg:border-r lg:py-8 lg:relative">
         <Logo />
 
         <Input.Root>
